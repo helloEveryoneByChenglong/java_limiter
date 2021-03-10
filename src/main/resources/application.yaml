@@ -1,0 +1,26 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /demo
+spring:
+  application:
+    name: demo
+  redis:
+    cluster:
+      nodes:
+        - 172.21.34.14:6380
+        - 172.21.34.20:6380
+        - 172.21.34.108:6380
+        - 172.21.34.14:6381
+        - 172.21.34.20:6381
+        - 172.21.34.108:6381
+    password: zhhl_redis
+    timeout: 3000
+    lettuce:
+      pool:
+        max-active: 500
+        max-idle: 30
+        max-wait: 3000
+
+# \u5E73\u53F0\u9650\u6D41\u53C2\u6570\u914D\u7F6E\uFF08appid:rate\uFF09
+rateLimit: "{\"10391\":\"1\",\"10392\":\"2\"}"
